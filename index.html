@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>S3 Static Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Static Website</title>
 
   <style>
     * {
@@ -14,65 +14,81 @@
 
     body {
       font-family: Arial, sans-serif;
-      background: #0f172a;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+      background: #f4f4f4;
       text-align: center;
     }
 
+    header {
+      background: #0077cc;
+      color: white;
+      padding: 30px;
+    }
+
+    header h1 {
+      margin-bottom: 10px;
+    }
+
     .container {
-      max-width: 700px;
-      padding: 40px;
+      margin-top: 50px;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
-      color: #38bdf8;
+    button {
+      background: #0077cc;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 5px;
+      cursor: pointer;
     }
 
-    p {
-      font-size: 1.2rem;
-      line-height: 1.8;
-      color: #cbd5e1;
+    button:hover {
+      background: #005fa3;
     }
 
-    .badge {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 10px 18px;
-      background: #38bdf8;
-      color: #0f172a;
-      border-radius: 999px;
-      font-weight: bold;
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+      color: green;
     }
 
     footer {
-      margin-top: 40px;
-      font-size: 0.9rem;
-      color: #94a3b8;
+      margin-top: 60px;
+      background: #222;
+      color: white;
+      padding: 15px;
     }
   </style>
 </head>
 
 <body>
+
+  <header>
+    <h1>Welcome to My Static Website</h1>
+    <p>Hosted on AWS S3</p>
+  </header>
+
   <div class="container">
-    <h1>🚀 S3 Static Website</h1>
+    <h2>Hello DevOps Learner 🚀</h2>
+    <p>This is a simple static website using HTML, CSS, and JavaScript.</p>
 
-    <p>
-      Your Amazon S3 bucket static website hosting is working successfully.
-    </p>
+    <br>
 
-    <div class="badge">
-      Hosted on AWS S3
-    </div>
+    <button onclick="showMessage()">Click Me</button>
 
-    <footer>
-      index.html deployed successfully
-    </footer>
+    <p id="message"></p>
   </div>
+
+  <footer>
+    <p>© 2026 Static Website Project</p>
+  </footer>
+
+  <script>
+    function showMessage() {
+      document.getElementById("message").innerHTML =
+        "Website is working successfully!";
+    }
+  </script>
+
 </body>
 </html>
